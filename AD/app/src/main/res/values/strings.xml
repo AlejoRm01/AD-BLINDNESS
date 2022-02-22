@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">AD</string>
+    <string name="no_account">No have account? <b>Signup</b></string> <!--make signup bold-->
+</resources>

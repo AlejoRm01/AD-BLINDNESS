@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "511104721973",
+    "project_id": "ad-blind",
+    "storage_bucket": "ad-blind.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:511104721973:android:ee76e1e781aa7f701ebd7c",
+        "android_client_info": {
+          "package_name": "com.example.ad"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "511104721973-bhv82922517fq2b96m82f22v176vr2kl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAoPYMND_hz35EkcGCZiXcIRNta2mqlBno"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "511104721973-bhv82922517fq2b96m82f22v176vr2kl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
