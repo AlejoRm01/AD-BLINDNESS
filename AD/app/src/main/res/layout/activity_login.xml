@@ -9,11 +9,13 @@
 
     <TextView
         android:id="@+id/titleLabelTv"
+        style="@style/TextAppearance.MaterialComponents.Headline4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:text="Login"
-        style="@style/TextAppearance.MaterialComponents.Headline4"/>
+        android:layout_marginTop="22dp"
+        android:text="Login" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -76,6 +78,6 @@
         android:layout_centerHorizontal="true"
         android:padding="5dp"
         android:text="¿No tiene una cuenta? Regístrese"
-        android:textStyle="bold"/>
+        android:textStyle="bold" />
 
 </RelativeLayout>
