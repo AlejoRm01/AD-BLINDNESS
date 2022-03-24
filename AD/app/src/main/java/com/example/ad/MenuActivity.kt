@@ -1,16 +1,28 @@
 package com.example.ad
 
+import android.graphics.ColorFilter
+import android.graphics.ColorMatrixColorFilter
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.SeekBar
+import android.widget.ImageView
 import androidx.appcompat.app.ActionBar
-import com.example.ad.databinding.ActivityProfileBinding
+import com.example.ad.databinding.ActivityMenuBinding
 import com.google.firebase.auth.FirebaseAuth
 
-class ProfileActivity : AppCompatActivity() {
+class MenuActivity : AppCompatActivity() {
+
+    //ImageView
+    private lateinit var imageView: ImageView
+
+    //SeekBar
+    private lateinit var redBar: SeekBar
+    private lateinit var greenBar: SeekBar
+    private lateinit var blueBar: SeekBar
 
     //ViewBinding
-    private lateinit var binding: ActivityProfileBinding
+    private lateinit var binding: ActivityMenuBinding
 
     //ActionBar
     private lateinit var actionBar: ActionBar
@@ -21,7 +33,7 @@ class ProfileActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityProfileBinding.inflate(layoutInflater)
+        binding = ActivityMenuBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         //init firebase auth
@@ -29,11 +41,19 @@ class ProfileActivity : AppCompatActivity() {
         checkUser()
 
         //Handle click, logout
-        binding.logoutBtn.setOnClickListener{
+        binding.logoutBtn.setOnClickListener {
             firebaseAuth.signOut()
             checkUser()
         }
+
+        imageView = findViewById(binding.image.id)
+
+        redBar = findViewById(binding.red.id)
+        greenBar = findViewById(binding.green.id)
+        blueBar = findViewById(binding.blue.id)
+
     }
+
 
     private fun checkUser() {
        //Check user is logged in or not
