@@ -10,7 +10,6 @@ import android.widget.Toast
 import androidx.appcompat.app.ActionBar
 import com.example.ad.databinding.ActivitySignUpBinding
 import com.google.firebase.auth.FirebaseAuth
-import java.util.regex.Pattern
 
 class SignUpActivity : AppCompatActivity() {
     //ViewBinding
@@ -92,7 +91,7 @@ class SignUpActivity : AppCompatActivity() {
                 Toast.makeText(this, "Account created with email $email", Toast.LENGTH_SHORT).show()
 
                 //Open profile
-                startActivity(Intent(this, ProfileActivity::class.java))
+                startActivity(Intent(this, MenuActivity::class.java))
                 finish()
             }
             .addOnFailureListener { e ->
