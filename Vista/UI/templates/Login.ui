@@ -57,7 +57,7 @@
    <widget class="QPushButton" name="botonIngresar">
     <property name="geometry">
      <rect>
-      <x>20</x>
+      <x>40</x>
       <y>250</y>
       <width>101</width>
       <height>31</height>
@@ -162,10 +162,13 @@ color: rgb(238, 238, 238);</string>
      <string/>
     </property>
    </widget>
-   <widget class="QPushButton" name="botonIngresar_2">
+   <widget class="QPushButton" name="botonRegistro">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
     <property name="geometry">
      <rect>
-      <x>200</x>
+      <x>180</x>
       <y>250</y>
       <width>101</width>
       <height>31</height>
@@ -190,7 +193,7 @@ color: rgb(238, 238, 238);</string>
    <zorder>label_2</zorder>
    <zorder>lineEditUsuario</zorder>
    <zorder>lineEditContrasena</zorder>
-   <zorder>botonIngresar_2</zorder>
+   <zorder>botonRegistro</zorder>
   </widget>
  </widget>
  <tabstops>
