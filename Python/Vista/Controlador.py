@@ -1,5 +1,5 @@
 import sys 
-from PyQt5 import QtCore, QtWidgets
+from PyQt5 import QtWidgets
 from PyQt5.QtWidgets import *
 from Paneles.Login import Login
 from Paneles.SignUp import SignUp
@@ -12,29 +12,25 @@ Encargada de llamara a las demas clases, ponerlas en ejecucion, y administrar da
 class Controlador:
 
     def __init__(self):
-        pass
+        self.login = Login()
+        self.SignUp = SignUp()
     
     def show_Ingreso(self):
-        self.login = Login()
         self.login.UIl.switch_Registro.connect(self.show_Registro)
         #self.login.UIl.switch_Menu.connect(self.show_Menu)
         self.login.show()
+        self.SignUp.close()
     
 
     def show_Registro(self):
-        self.SignUp = SignUp()
         self.SignUp.UIs.switch_Login.connect(self.show_Ingreso)
         self.login.close()
         self.SignUp.show()
 
-'''        
+   
     def show_Menu(self):
-        self.Menu = Menu()
-        self.compra.UIm.switch_Inventario.connect(self.show_Inventario)
-        self.compra.UIm.switch_Venta.connect(self.show_Venta)
-        self.compra.UIm.switch_Usuario.connect(self.show_Usuario)
-        self.compra.show()
-'''        
+        pass
+   
         
 def main():
     app = QtWidgets.QApplication(sys.argv)
