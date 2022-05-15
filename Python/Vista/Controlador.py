@@ -1,4 +1,4 @@
-import sys 
+import sys, subprocess
 from PyQt5 import QtWidgets
 from PyQt5.QtWidgets import *
 from Paneles.Login import Login
@@ -17,7 +17,7 @@ class Controlador:
     
     def show_Ingreso(self):
         self.login.UIl.switch_Registro.connect(self.show_Registro)
-        #self.login.UIl.switch_Menu.connect(self.show_Menu)
+        self.login.UIl.switch_Menu.connect(self.show_Camara)
         self.login.show()
         self.SignUp.close()
     
@@ -27,9 +27,11 @@ class Controlador:
         self.login.close()
         self.SignUp.show()
 
-   
     def show_Menu(self):
         pass
+    
+    def show_Camara(self):
+        exec(open('prueba_colors.py').read())
    
         
 def main():

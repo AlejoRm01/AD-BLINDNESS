@@ -54,7 +54,7 @@ while True:
     # tri_color = cv2.bitwise_and(frame, frame, mask = Tri_color_mask)
 
     cv2.imshow('frame', frame)
-    cv2.imshow('Result', red)
+    cv2.imshow('Result', green)
 
     if cv2.waitKey(1) == ord('q'):
         break

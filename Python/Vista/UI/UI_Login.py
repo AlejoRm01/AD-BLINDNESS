@@ -9,6 +9,7 @@ class UI_login(QMainWindow):
     
     switch_Registro = QtCore.pyqtSignal()
     switch_Menu = QtCore.pyqtSignal()
+    switch_Verficar = QtCore.pyqtSignal()
     
     def __init__(self, parent=None):
         super(UI_login, self).__init__()
@@ -24,6 +25,9 @@ class UI_login(QMainWindow):
         
     def abrirRegistro(self):
         self.switch_Registro.emit()
+        
+    def validar(self):
+        self.sigValidar.emit()  
         
     def abrirMenu(self):
         self.switch_Menu.emit()
