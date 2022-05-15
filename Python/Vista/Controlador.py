@@ -28,10 +28,10 @@ class Controlador:
         self.SignUp.show()
 
     def show_Menu(self):
-        pass
+        exec(open('prueba_colors.py').read())
     
     def show_Camara(self):
-        exec(open('prueba_colors.py').read())
+        pass
    
         
 def main():
