@@ -8,7 +8,7 @@ from PyQt5.QtGui import *
 class UI_SignUp(QMainWindow):
     
     switch_Login = QtCore.pyqtSignal()
-    switch_crear_usuario = QtCore.pyqtSignal()
+    sigValidar = QtCore.pyqtSignal()
     
     def __init__(self, parent=None):
         super(UI_SignUp, self).__init__()
@@ -19,12 +19,24 @@ class UI_SignUp(QMainWindow):
         self.label.setAttribute(Qt.WA_TranslucentBackground, True)
         self.label_2.setAttribute(Qt.WA_TranslucentBackground, True)
         # -----------------Trigger-----------------
-        self.botonRegistro.clicked.connect(self.abrirLogin)
+        self.botonRegistro.clicked.connect(self.validar)
     
     def abrirLogin(self):
         self.switch_Login.emit()
     
-    def crear_usuario(self):
-        self.switch_crear_usuario.emit()
+    def getUsuario(self):
+        return self.lineEditUsuario.text()
+    
+    def getContrasena(self):
+        return self.lineEditContrasena.text()
+    
+    def getContrasena2(self):
+        return self.lineEditContrasena2.text()
+
+    def validar(self):
+        self.sigValidar.emit()
+
+
+
  
         

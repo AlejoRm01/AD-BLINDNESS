@@ -9,7 +9,7 @@ class UI_login(QMainWindow):
     
     switch_Registro = QtCore.pyqtSignal()
     switch_Menu = QtCore.pyqtSignal()
-    switch_Verficar = QtCore.pyqtSignal()
+    sigValidar = QtCore.pyqtSignal()
     
     def __init__(self, parent=None):
         super(UI_login, self).__init__()
@@ -20,7 +20,7 @@ class UI_login(QMainWindow):
         self.label.setAttribute(Qt.WA_TranslucentBackground, True)
         self.label_2.setAttribute(Qt.WA_TranslucentBackground, True)
         # -----------------Trigger-----------------
-        self.botonIngresar.clicked.connect(self.abrirMenu)
+        self.botonIngresar.clicked.connect(self.validar)
         self.botonRegistro.clicked.connect(self.abrirRegistro)
         
     def abrirRegistro(self):
@@ -31,3 +31,9 @@ class UI_login(QMainWindow):
         
     def abrirMenu(self):
         self.switch_Menu.emit()
+
+    def getUsuario(self):
+        return self.lineEditUsuario.text()
+
+    def getContrasena(self):
+        return self.lineEditContrasena.text()

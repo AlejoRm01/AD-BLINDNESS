@@ -4,7 +4,7 @@ from cryptography.fernet import Fernet
 #---------------------------Encriptar-----------------------------------
 def encriptar(password):
     
-    file = open('key.key','rb')
+    file = open('Utiles/key.key','rb')
     key = file.read()
     file.close()
     f = Fernet(key)
@@ -13,18 +13,18 @@ def encriptar(password):
 
     return password 
 #------------------Desencriptar-------------------------
-def desencriptar(password):
+def desencriptar(usuario):
       
-    if not(type(password) == None):
-        for i in password:
-            m = i['Contraseña']
-            file = open('key.key','rb')
-            key = file.read()
-            file.close()
-            f = Fernet(key)
-            m = m.encode()
-            decrypted = f.decrypt(m).decode()   
-            return decrypted
+    if not(type(usuario) == None):
+       
+        m = usuario['Contrasena']
+        file = open('Utiles/key.key','rb')
+        key = file.read()
+        file.close()
+        f = Fernet(key)
+        m = m.encode()
+        decrypted = f.decrypt(m).decode()   
+        return decrypted
 #------------------------Verificar---------------------------- ----
 
 def verificar(password):

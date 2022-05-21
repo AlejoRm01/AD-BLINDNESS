@@ -1,7 +1,6 @@
 import sys
-#from Utiles.Verificar import verificar
 from UI.UI_Login import *
-#from Utiles.EnviarCorreo import enviarCorreo
+from Utiles.DB_Driver import getUsuario
 #from Constantes import ADMINISTRADOR, CORREO
 class Login():
     
@@ -10,12 +9,22 @@ class Login():
         self.usuario = None
         self.contrasena = None
 
+        self.UIl.sigValidar.connect(self.validar)
 
     def validar(self):
         self.usuario = self.UIl.getUsuario()
         self.contrasena = self.UIl.getContrasena()
+
+        aux = getUsuario(self.usuario)
+
+        if aux == None:
+            self.UIl.label_4.setText("El usuario no existe")
+            self.UIl.label_4.show()
+        elif aux == self.contrasena:
+            self.UIl.abrirMenu()
+            self.UIl.close()
+
         
-    
     def show(self):
         self.UIl.show()
         
