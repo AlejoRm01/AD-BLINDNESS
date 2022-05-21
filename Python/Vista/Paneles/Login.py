@@ -12,7 +12,9 @@ class Login():
 
 
     def validar(self):
-        pass
+        self.usuario = self.UIl.getUsuario()
+        self.contrasena = self.UIl.getContrasena()
+        
     
     def show(self):
         self.UIl.show()

@@ -9,9 +9,13 @@ class SignUp():
         self.UIs = UI_SignUp()
         self.usuario = None
         self.contrasena = None
-        
-    def validar(self):
-        pass
+        self.contrasena2 = None
+    
+    
+    def crear(self):
+        self.usuario = self.UIs.getUsuario()
+        self.contrasena = self.UIs.getContrasena()
+        self.contrasena2 = self.UIs.getContrasena2()
     
     def show(self):
         self.UIs.show()

@@ -8,6 +8,7 @@ from PyQt5.QtGui import *
 class UI_SignUp(QMainWindow):
     
     switch_Login = QtCore.pyqtSignal()
+    switch_crear_usuario = QtCore.pyqtSignal()
     
     def __init__(self, parent=None):
         super(UI_SignUp, self).__init__()
@@ -22,6 +23,8 @@ class UI_SignUp(QMainWindow):
     
     def abrirLogin(self):
         self.switch_Login.emit()
-        
+    
+    def crear_usuario(self):
+        self.switch_crear_usuario.emit()
  
         

@@ -24,6 +24,7 @@ class Controlador:
 
     def show_Registro(self):
         self.SignUp.UIs.switch_Login.connect(self.show_Ingreso)
+        self.SignUp.UIs.switch_crear_usuario.connect(self.crear_usuario)
         self.login.close()
         self.SignUp.show()
 
