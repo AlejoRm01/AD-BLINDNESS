@@ -3,8 +3,8 @@ from PyQt5 import QtWidgets
 from PyQt5.QtWidgets import *
 from Paneles.Login import Login
 from Paneles.SignUp import SignUp
-from Paneles.Menu import Menu
-#from Paneles.Menu import Menu
+from Paneles.Menu import Menu 
+
 
 """
 Clase Main
@@ -30,7 +30,7 @@ class Controlador:
 
     def show_Menu(self):
         self.Menu.UIm.switch_camara.connect(self.show_Camara)
-        self.show_Menu()
+        self.Menu.show()
         self.login.close()
     
     def show_Camara(self):

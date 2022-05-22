@@ -3,6 +3,7 @@ from PyQt5 import QtCore, Qt, QtGui
 from PyQt5.QtWidgets import *
 from PyQt5.QtCore import *
 from PyQt5.QtGui import *
+#from Constantes import *
 
 class UI_menu(QMainWindow):
     
@@ -17,8 +18,8 @@ class UI_menu(QMainWindow):
         self.setContentsMargins(0, 0, 0, 0)
         self.label.setAttribute(Qt.WA_TranslucentBackground, True)
         # -----------------Trigger-----------------
-        self.botonCamara.clicked.connect(self.switch_camara)
+        self.botonCamara.clicked.connect(self.abrirCamara)
         
         
-    def switch_camara(self):
+    def abrirCamara(self):
         self.switch_camara.emit()
