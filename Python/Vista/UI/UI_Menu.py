@@ -17,6 +17,8 @@ class UI_menu(QMainWindow):
         #self.setWindowIcon(QIcon(ICONO))
         self.setContentsMargins(0, 0, 0, 0)
         self.label.setAttribute(Qt.WA_TranslucentBackground, True)
+        self.ImagenLabel.setAttribute(Qt.WA_TranslucentBackground, True)
+        self.ImagenLabel.setPixmap(QtGui.QPixmap('Utiles/Protanopia.png'))      
         # -----------------Trigger-----------------
         self.botonCamara.clicked.connect(self.abrirCamara)
         
